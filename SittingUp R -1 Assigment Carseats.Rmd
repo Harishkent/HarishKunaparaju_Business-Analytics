@@ -1,0 +1,55 @@
+---
+title: "BA class assignment"
+author: "Harish Kunaparaju"
+date: "2022-09-19"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+
+```{r}
+library(ISLR)
+input<- Carseats
+```
+
+
+```{r}
+summary(input)
+print(input)
+```
+
+#interquartile range of carseats
+```{r}
+IQR(Carseats$Sales)
+```
+
+#barplot and scatterplot between sales and price
+```{r}
+plot(Carseats$Sales, Carseats$Income, main = "Scatterplot", xlab = "Sales", ylab = "Price")
+
+barplot(Carseats$Sales,Carseats$Price)
+```
+
+#scatterplot between sales and price using abline
+```{r}
+plot(Carseats$Sales,Carseats$Price,main="scatterplot",xlab="Sales",ylab="Price")
+abline(Carseats$Sales,Carseats$Price)
+
+```
+
+#correlation between sales and price
+```{r}
+cor(Carseats$Sales,Carseats$Price)
+```
+
+#maximum value of advertising attribute
+```{r}
+max(Carseats$Advertising)
+```
+
